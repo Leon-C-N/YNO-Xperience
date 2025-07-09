@@ -1,0 +1,90 @@
+.divisor {
+  display: flex; 
+  height: 100vh; 
+}
+
+.parte1 {
+  width: 240px; 
+  flex-shrink: 0; 
+  background-color: #080808; 
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+main {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(../img/bem_vindo_bg.png);
+  background-size: cover;
+  background-position: center;
+  color: aliceblue;
+  padding: 50px;
+}
+
+footer {
+  padding: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.bem_vindo {
+  font-size: 40px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.botao{
+  margin-top: 50px;
+}
+.botao a{
+  text-decoration: none;
+  color: #ccc;
+}
+.botao a:hover{
+  color: white;
+}
+
+.botao a h1 {
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0;  
+}
+
+@media only screen and (max-width: 1280px) {
+
+    .divisor {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .parte1 {
+        width: 100%;       
+        height: auto;      
+        justify-content: space-between; 
+        align-items: center;
+        padding: 15px 25px; 
+    }
+
+   
+    .parte1 ul {
+        display: flex;
+        flex-direction: column;
+  
+    }
+    main {
+        padding: 30px; 
+    }
+
+    .bem_vindo {
+        font-size: 35px;
+    }
+    .botao {
+        margin-top: 30px;
+    }
+}

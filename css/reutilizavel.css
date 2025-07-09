@@ -1,0 +1,133 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  font-family: sans-serif;
+  color: white;
+}
+
+body{
+  background-color: black;
+}
+main {
+  flex-grow: 1; 
+  color: aliceblue;
+  padding: 50px;  
+}
+footer{
+  text-align: center;
+}
+
+@keyframes sobeEaparece {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+.fadein {
+  animation: sobeEaparece 1s ease-out forwards;
+}
+
+@keyframes aumentaimg{
+   from {
+    transform: scale(1); 
+  }
+  to {
+    transform: scale(1.1); 
+  }
+}
+
+ul{
+  list-style-type: none;
+}
+
+
+/*PARTES 1 e 2 d a divisão*/
+.divisor{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.parte1{
+  width: 150px; 
+  flex-shrink: 0; 
+  
+  background-color: #080808; 
+  color: aliceblue;
+
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.texto{
+  color: white;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 11pt;
+  display: block; 
+  padding: 10px 0;
+  padding-bottom: 50px;
+}
+.navegacao a {
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 16pt;
+  display: block; 
+  padding: 10px 0;
+}
+.navegacao a:hover {
+  color: white; 
+}
+
+.parte2 {
+  flex-grow: 1; 
+  
+  display: flex;
+  flex-direction: column; 
+  overflow-x:hidden; 
+}
+
+@media only screen and (max-width:1280px) {
+  
+    .divisor {
+        flex-direction: column;
+        height: auto; 
+        min-height: 100vh; 
+    }
+
+    .parte1 {
+        width: 100%;       
+        height: auto;     
+        flex-direction: column; 
+        justify-content: space-around; 
+        align-items: center; 
+        padding: 10px 25px; 
+    }
+    nav{
+      width: 700px;
+    }
+    .navegacao ul {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: center;
+    }
+    .navegacao a {
+        padding: 10px; 
+        font-size: 20px; 
+        display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+    }
+
+    main {
+        padding: 25px; 
+    }
+}
